@@ -1,0 +1,172 @@
+<html lang="en">
+ <head>
+ <title>Calculator</title>
+ </head>
+ <script>
+function subtraction()
+{
+	var inputbox1=document.getElementById("n1")
+	var number1=inputbox1.value
+	var inputbox2=document.getElementById("n2")
+	var number2=inputbox2.value
+	/*document.write("Number 1 = "+ number1+"<br>")
+	document.write("Number 2 = "+ number2+"<br>")
+	document.write(number1+" - "+number2+" = "+(number1-number2))*/
+	var ans=number1-number2
+	document.getElementById("output").innerHTML=ans
+		
+			
+}
+function multiplication()
+{
+	var inputbox1=document.getElementById("n1")
+	var number1=inputbox1.value
+	var inputbox2=document.getElementById("n2")
+	var number2=inputbox2.value
+	/*document.write("Number 1 = "+ number1+"<br>")
+	document.write("Number 2 = "+ number2+"<br>")
+	document.write(number1+" * "+number2+" = "+(number1*number2))*/
+	var ans=number1*number2
+	document.getElementById("output").innerHTML=ans
+		
+}
+function divison()
+{
+	var inputbox1=document.getElementById("n1")
+	var number1=inputbox1.value
+	var inputbox2=document.getElementById("n2")
+	var number2=inputbox2.value
+	/*document.write("Number 1 = "+ number1+"<br>")
+	document.write("Number 2 = "+ number2+"<br>")
+	document.write(number1+" / "+number2+" = "+(number1/number2))*/
+	var ans=number1/number2
+	document.getElementById("output").innerHTML=ans	
+}
+function remainder()
+{
+	var inputbox1=document.getElementById("n1")
+	var number1=inputbox1.value
+	var inputbox2=document.getElementById("n2")
+	var number2=inputbox2.value
+	/*document.write("Number 1 = "+ number1+"<br>")
+	document.write("Number 2 = "+ number2+"<br>")
+	document.write(number1+" % "+number2+" = "+(number1%number2))*/
+	var ans=number1-number2
+	document.getElementById("output").innerHTML=ans	
+}
+function Addition()
+{
+	// to target input box
+	var box1=document.getElementById("n1")
+	var box2=document.getElementById("n2")
+	// to fetch the data from input box
+	var number1=box1.value
+	var number2=box2.value
+	// var result=number1+number2 ( It performs concatination)
+	/*var result =parseInt(number1)+parseInt(number2)
+	document.write(number1+" + "+number2+" = "+result)*/
+		var ans=parseInt(number1)+parseInt(number2)
+	document.getElementById("output").innerHTML=ans
+}
+
+function table(num1,num2)
+{
+	var table=document.getElementById("num1")
+	var num=table.value
+	var tablesize=document.getElementById("num2")
+	var size=tablesize.value
+
+		for(var a=1;a<=size;a++)
+	{
+			document.write(num+" * "+a+" = "+(num*a)+"<br>")
+	}
+}
+ </script>
+ <style>
+ input
+ {
+ font-size:20px;
+ }
+ label
+ {
+ font-size:30px;
+ color:white;
+ text-shadow:0px 0px 5px black;
+}
+fieldset
+{
+width:600px;
+height:500px;
+background-image:linear-gradient(gray,maroon,brown);
+}
+#table
+{
+width:100px;
+height:300px;
+}
+marquee
+{
+font-size:40px;
+padding-top:20px;
+}
+ </style>
+ <body style="background-image:linear-gradient(blue,red,yellow,gray)" >
+  <center>
+	<h1>Take input from user to perform operation</h1>
+	<fieldset>
+	<marquee>Calculator Prepared By <strong style="color:white;text-shadow:0px 0px 11px red;">Pavan Kumar</strong></marquee>
+	<table>
+	<tr>
+	<td>
+	<label>Enter first number :</label></td><td>
+	<input placeholder="Number 1" id='n1'></input></td></tr>
+	<br>
+	<br>
+	<tr>
+	<td>
+	<label>Enter Second number :</label></td><td>
+	<input placeholder="Number 2" id='n2'></input></td></tr>
+	<br>
+	<br>
+	<tr>
+	</tr>
+	<tr>
+	<td><center>
+	<input type="button" value="Subtraction( - )" onclick="subtraction()"></input></td><td>
+	<input type="button" value="Multiplication( * )" onclick="multiplication()"></input></td>
+	</tr>
+	<tr><td></td><td></td></tr>
+	<tr>
+	<td><center>
+	<input type="button" value="Divison ( / )" onclick="divison()"></input></center></td><td>
+	<input type="button" value="Remainder ( % )" onclick="remainder()"></input></td>
+	</tr>
+	<tr><td><center><input type="button" value="Addition( + )" onclick="Addition()"></input></center></td></tr>
+	</center>
+	</table>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center><label>Answer : </label><label id="output" style="border:double"></label></center>
+	</fieldset>
+	<br>
+	<br>
+	<hr></hr>
+	<br>
+	<br>
+	<fieldset id="table">
+	<br>
+	<br>
+	<br>
+	<br>
+	<input placeholder=" Enter Table Number" id="num1"></input>
+	<br>
+	<br>
+	<input placeholder=" Enter Table size" id="num2"></input>
+	<br>
+	<br>
+	<input type="button" value="Get Table" onclick="table()"></input>
+	</fieldset>
+ </body>
+</html>
